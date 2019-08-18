@@ -3,24 +3,24 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>栀子花</title>
+  <title>SSM框架(一)Spring基本介绍和配置 | 栀子花</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="陈SIR技术分享中心">
   
-  <meta name="description" content="@TOC Spring基本介绍和配置1. 什么是Spring？Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对">
-<meta name="keywords" content="栀子花">
+  <meta name="description" content="Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。">
+<meta name="keywords" content="Spring,Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="栀子花">
+<meta property="og:title" content="SSM框架(一)Spring基本介绍和配置">
 <meta property="og:url" content="/2019/08/18/SSM框架(一)Spring基本介绍和配置/index.html">
 <meta property="og:site_name" content="栀子花">
-<meta property="og:description" content="@TOC Spring基本介绍和配置1. 什么是Spring？Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对">
+<meta property="og:description" content="Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190803141326725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5faGFvXzE4MQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-08-18T06:50:25.725Z">
+<meta property="og:updated_time" content="2019-08-18T06:54:20.800Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="栀子花">
-<meta name="twitter:description" content="@TOC Spring基本介绍和配置1. 什么是Spring？Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对">
+<meta name="twitter:title" content="SSM框架(一)Spring基本介绍和配置">
+<meta name="twitter:description" content="Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190803141326725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5faGFvXzE4MQ==,size_16,color_FFFFFF,t_70">
   
   
@@ -109,6 +109,36 @@
         <section id="main" class="body-wrap"><article id="post-SSM框架(一)Spring基本介绍和配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      SSM框架(一)Spring基本介绍和配置
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Java/">Java</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-08-18
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
     <div class="article-entry post-content" itemprop="articleBody">
       
             
@@ -188,8 +218,8 @@
 </bean>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年08月18日 14:50</p>
-        <p>原始链接： <a class="post-url" href="/2019/08/18/SSM框架(一)Spring基本介绍和配置/" title="">/2019/08/18/SSM框架(一)Spring基本介绍和配置/</a></p>
+        <p>最后更新： 2019年08月18日 14:54</p>
+        <p>原始链接： <a class="post-url" href="/2019/08/18/SSM框架(一)Spring基本介绍和配置/" title="SSM框架(一)Spring基本介绍和配置">/2019/08/18/SSM框架(一)Spring基本介绍和配置/</a></p>
         <footer>
             <a href="">
                 <img src="/images/timg.png" alt="栀子花">
@@ -246,7 +276,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/08/18/SSM框架(一)Spring基本介绍和配置/&title=栀子花&pic=images/timg.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/08/18/SSM框架(一)Spring基本介绍和配置/&title=《SSM框架(一)Spring基本介绍和配置》 — 栀子花&pic=images/timg.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -256,7 +286,7 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/08/18/SSM框架(一)Spring基本介绍和配置/&title=栀子花&source=专注 WEB 开发" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/08/18/SSM框架(一)Spring基本介绍和配置/&title=《SSM框架(一)Spring基本介绍和配置》 — 栀子花&source=专注 WEB 开发" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
@@ -266,7 +296,7 @@
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=栀子花&url=/2019/08/18/SSM框架(一)Spring基本介绍和配置/&via=" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SSM框架(一)Spring基本介绍和配置》 — 栀子花&url=/2019/08/18/SSM框架(一)Spring基本介绍和配置/&via=" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -290,6 +320,15 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Spring/" class="color2">Spring</a>
+      
+    <a href="/tags/Java/" class="color5">Java</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -306,9 +345,19 @@
 
 <nav id="article-nav">
   
+    <a href="/2019/08/18/my-first-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          my-first-blog
+        
+      </span>
+    </a>
   
-    <a href="/2019/08/18/my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">my-first-blog</span>
+  
+    <a href="/2019/08/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Hello World</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -370,7 +419,7 @@
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            
+            <a class="category-link" href="/categories/Java/">Java</a>
         </div>
         <div id="sidebar-menu-box-tags">
             <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a>
