@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="栀子花">
 <meta property="og:description" content="Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190803141326725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5faGFvXzE4MQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-08-18T06:56:24.462Z">
+<meta property="og:image" content="/2019/08/18/SSM框架(一)Spring基本介绍和配置/images/20190803141326725.png,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-08-18T08:35:47.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSM框架(一)Spring基本介绍和配置">
 <meta name="twitter:description" content="Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190803141326725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5faGFvXzE4MQ==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="/2019/08/18/SSM框架(一)Spring基本介绍和配置/images/20190803141326725.png,size_16,color_FFFFFF,t_70">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -213,11 +213,11 @@
 <p><strong>构造器注入</strong><br>通过调用带参数的构造器来实现，容器会在Bean被实例化的时候，根据参数的类型，执行相应的构造器。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 指定一个类的初始化调用方法以及销毁调用方法,延迟实例化：lazy-init 当beans添加default-lazy-init="true"的时候，所有bean全部延迟实例化--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"cat"</span> <span class="attr">class</span>=<span class="string">"com.chtw.entity.Cat"</span> <span class="attr">init-method</span>=<span class="string">"init"</span> <span class="attr">destroy-method</span>=<span class="string">"destory"</span> <span class="attr">lazy-init</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--构造器注入--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"student"</span> <span class="attr">class</span>=<span class="string">"com.chtw.entity.Student"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">"0"</span> <span class="attr">value</span>=<span class="string">"Bob"</span>&gt;</span><span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">"1"</span> <span class="attr">ref</span>=<span class="string">"cat"</span>&gt;</span><span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://img-blog.csdnimg.cn/20190803141326725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5faGFvXzE4MQ==,size_16,color_FFFFFF,t_70" alt="Alt"><br>本人联系方式2329095893,欢迎各位进行学习讨论</p>
+<p><img src="./images/20190803141326725.png,size_16,color_FFFFFF,t_70" alt="Alt"><br>本人联系方式2329095893,欢迎各位进行学习讨论</p>
 </bean>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年08月18日 14:56</p>
+        <p>最后更新： 2019年08月18日 16:35</p>
         <p>原始链接： <a class="post-url" href="/2019/08/18/SSM框架(一)Spring基本介绍和配置/" title="SSM框架(一)Spring基本介绍和配置">/2019/08/18/SSM框架(一)Spring基本介绍和配置/</a></p>
         <footer>
             <a href="">
