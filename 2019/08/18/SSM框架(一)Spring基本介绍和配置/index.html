@@ -17,7 +17,7 @@
 <meta property="og:description" content="Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190803141326725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5faGFvXzE4MQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-08-18T06:54:20.800Z">
+<meta property="og:updated_time" content="2019-08-18T06:56:24.462Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSM框架(一)Spring基本介绍和配置">
 <meta name="twitter:description" content="Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。">
@@ -142,8 +142,7 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>@<a href="目录">TOC</a></p>
-<h1 id="Spring基本介绍和配置"><a href="#Spring基本介绍和配置" class="headerlink" title="Spring基本介绍和配置"></a>Spring基本介绍和配置</h1><h2 id="1-什么是Spring？"><a href="#1-什么是Spring？" class="headerlink" title="1. 什么是Spring？"></a>1. 什么是Spring？</h2><p>Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。</p>
+            <h1 id="Spring基本介绍和配置"><a href="#Spring基本介绍和配置" class="headerlink" title="Spring基本介绍和配置"></a>Spring基本介绍和配置</h1><h2 id="1-什么是Spring？"><a href="#1-什么是Spring？" class="headerlink" title="1. 什么是Spring？"></a>1. 什么是Spring？</h2><p>Spring是一个开源的的轻量级的应用开发框架，其目的是用来简化企业级应用程序开发，减少代码之间的侵入性。Spring为系统提供了一个整体的解决方案，开发者除了可以利用它本身提供的功能外，还可以与第三方 的框架和技术整合应用，可以自由的选择采用哪种技术进行开发。使用Spring的目的：Spring 的本质是管理软件中的对象，即如何创建对象和维护对象之间的关系。</p>
 <h2 id="2-Spring容器和Java-Bean"><a href="#2-Spring容器和Java-Bean" class="headerlink" title="2. Spring容器和Java Bean"></a>2. Spring容器和Java Bean</h2><p>在Spring中，任何java类和javaBean都会被当成Bean处理，这些Bean通过Spring容器进行管理和应用，Spring容器是实现了IOC和AOP机制，这些机制可以简化Bean的创建和Bean对象之间的解耦。</p>
 <p>Spring容器有BeanFactory和ApplicationContext两种类型。  BeanFacotry是Spring中比较原始的Factory，ApplicationContext继承自BeanFactory接口，拥有更多的企业级方法，原始的BeanFactory无法支持Spring的许多插件，如AOP功能、Web应用等， 所以在实际应用中推荐使用ApplicationContext，实例化ApplicationContext有两种方式（两种方式下都需要有applicationContext.xml配置文件）</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"classpath:applicationContext.xml"</span>);</span><br><span class="line">ApplicationContext context2 = <span class="keyword">new</span> FileSystemXmlApplicationContext(<span class="string">"src/applicationContext.xml"</span>);</span><br></pre></td></tr></table></figure>
@@ -218,7 +217,7 @@
 </bean>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年08月18日 14:54</p>
+        <p>最后更新： 2019年08月18日 14:56</p>
         <p>原始链接： <a class="post-url" href="/2019/08/18/SSM框架(一)Spring基本介绍和配置/" title="SSM框架(一)Spring基本介绍和配置">/2019/08/18/SSM框架(一)Spring基本介绍和配置/</a></p>
         <footer>
             <a href="">
@@ -342,26 +341,6 @@
         </nav>
     </aside>
     
-
-<nav id="article-nav">
-  
-    <a href="/2019/08/18/my-first-blog/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          my-first-blog
-        
-      </span>
-    </a>
-  
-  
-    <a href="/2019/08/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Hello World</span>
-      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
-    </a>
-  
-</nav>
 
 
 
