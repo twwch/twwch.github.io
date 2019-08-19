@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>SSM框架(二)SpringIOC容器的使用 | 栀子花</title>
+  <title>SSM框架(三)SpringMVC的应用一 | 栀子花</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="陈SIR技术分享中心">
@@ -11,7 +11,7 @@
   <meta name="description" content="SpringMVC全名是model view controller，从名称就可以看出他的意思，就是模型-视图-控制器三个部分，利用MVC可以将业务逻辑，数据、和界面显示分开。">
 <meta name="keywords" content="Spring,Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SSM框架(二)SpringIOC容器的使用">
+<meta property="og:title" content="SSM框架(三)SpringMVC的应用一">
 <meta property="og:url" content="/2019/08/18/SSM框架(三)SpringMVC的应用一/index.html">
 <meta property="og:site_name" content="栀子花">
 <meta property="og:description" content="SpringMVC全名是model view controller，从名称就可以看出他的意思，就是模型-视图-控制器三个部分，利用MVC可以将业务逻辑，数据、和界面显示分开。">
@@ -25,9 +25,9 @@
 <meta property="og:image" content="/images/20190804101322854.png">
 <meta property="og:image" content="/images/20190804100937277.png">
 <meta property="og:image" content="/images/201908041011345.png">
-<meta property="og:updated_time" content="2019-08-18T23:57:35.336Z">
+<meta property="og:updated_time" content="2019-08-19T00:03:43.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SSM框架(二)SpringIOC容器的使用">
+<meta name="twitter:title" content="SSM框架(三)SpringMVC的应用一">
 <meta name="twitter:description" content="SpringMVC全名是model view controller，从名称就可以看出他的意思，就是模型-视图-控制器三个部分，利用MVC可以将业务逻辑，数据、和界面显示分开。">
 <meta name="twitter:image" content="/images/20190804085041350.png">
   
@@ -121,7 +121,7 @@
         
   
     <h1 class="post-title" itemprop="name">
-      SSM框架(二)SpringIOC容器的使用
+      SSM框架(三)SpringMVC的应用一
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -187,12 +187,12 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"$&#123;pageContext.request.contextPath&#125;/index/register.do"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		用户名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"userName"</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		密码:<span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">type</span>=<span class="string">"password"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		年龄:<span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"number"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		电话:<span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"phoneNumber"</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span>  <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/images/20190804100558560.png" alt="在这里插入图片描述"><br><strong>当Controller组件处理后，需要向jsp页面传值，可以使用以下几种方式：</strong></p>
-<p>1、直接使用HttpRequestServlet 和 Session，例如：request.setAttribute(“message”, “注解controller访问成功！”);<br>2、使用map，Model，ModelMap, ModelAndView实现<br><img src="/images/20190804101226493.png" alt="在这里插入图片描述"><br>在index.jsp中加一句：</p><h2>${username}</h2><br><img src="/images/20190804101322854.png" alt="在这里插入图片描述"><br>3、使用@ModelAttribute和@SessionAttributes注解<br><img src="/images/20190804100937277.png" alt="在这里插入图片描述"><br><img src="/images/201908041011345.png" alt="在这里插入图片描述"><br>本人联系方式2329095893,欢迎各位进行学习讨论<p></p>
+<p>1、直接使用HttpRequestServlet 和 Session，例如：request.setAttribute(“message”, “注解controller访问成功！”);<br>2、使用map，Model，ModelMap, ModelAndView实现<br><img src="/images/20190804101226493.png" alt="在这里插入图片描述"><br>在index.jsp中加一句：<code>&lt;h2&gt;${username}&lt;/h2&gt;</code><br><img src="/images/20190804101322854.png" alt="在这里插入图片描述"><br>3、使用@ModelAttribute和@SessionAttributes注解<br><img src="/images/20190804100937277.png" alt="在这里插入图片描述"><br><img src="/images/201908041011345.png" alt="在这里插入图片描述"><br>本人联系方式2329095893,欢迎各位进行学习讨论</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年08月19日 07:57</p>
-        <p>原始链接： <a class="post-url" href="/2019/08/18/SSM框架(三)SpringMVC的应用一/" title="SSM框架(二)SpringIOC容器的使用">/2019/08/18/SSM框架(三)SpringMVC的应用一/</a></p>
+        <p>最后更新： 2019年08月19日 08:03</p>
+        <p>原始链接： <a class="post-url" href="/2019/08/18/SSM框架(三)SpringMVC的应用一/" title="SSM框架(三)SpringMVC的应用一">/2019/08/18/SSM框架(三)SpringMVC的应用一/</a></p>
         <footer>
             <a href="">
                 <img src="/images/timg.png" alt="栀子花">
@@ -249,7 +249,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/08/18/SSM框架(三)SpringMVC的应用一/&title=《SSM框架(二)SpringIOC容器的使用》 — 栀子花&pic=images/timg.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/08/18/SSM框架(三)SpringMVC的应用一/&title=《SSM框架(三)SpringMVC的应用一》 — 栀子花&pic=images/timg.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -259,7 +259,7 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/08/18/SSM框架(三)SpringMVC的应用一/&title=《SSM框架(二)SpringIOC容器的使用》 — 栀子花&source=专注 WEB 开发" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/08/18/SSM框架(三)SpringMVC的应用一/&title=《SSM框架(三)SpringMVC的应用一》 — 栀子花&source=专注 WEB 开发" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
@@ -269,7 +269,7 @@
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SSM框架(二)SpringIOC容器的使用》 — 栀子花&url=/2019/08/18/SSM框架(三)SpringMVC的应用一/&via=" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SSM框架(三)SpringMVC的应用一》 — 栀子花&url=/2019/08/18/SSM框架(三)SpringMVC的应用一/&via=" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -311,28 +311,23 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-SpringMVC的介绍"><span class="post-toc-text">1. SpringMVC的介绍</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-SpringMVC的工作流程"><span class="post-toc-text">2. SpringMVC的工作流程</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-基于注解的SpringMVC开发"><span class="post-toc-text">3. 基于注解的SpringMVC开发</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-SpringMVC页面值的接收与传递"><span class="post-toc-text">4. SpringMVC页面值的接收与传递</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null"><span class="post-toc-text">${username}</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-SpringMVC的介绍"><span class="post-toc-text">1. SpringMVC的介绍</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-SpringMVC的工作流程"><span class="post-toc-text">2. SpringMVC的工作流程</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-基于注解的SpringMVC开发"><span class="post-toc-text">3. 基于注解的SpringMVC开发</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-SpringMVC页面值的接收与传递"><span class="post-toc-text">4. SpringMVC页面值的接收与传递</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2019/08/18/SSM框架(一)Spring基本介绍和配置/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/18/SSM框架(二)SpringIOC容器的使用/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          SSM框架(一)Spring基本介绍和配置
+          SSM框架(二)SpringIOC容器的使用
         
       </span>
     </a>
   
-  
-    <a href="/2019/08/18/SSM框架(二)SpringIOC容器的使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">SSM框架(二)SpringIOC容器的使用</span>
-      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
-    </a>
   
 </nav>
 
