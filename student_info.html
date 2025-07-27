@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px 25px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        th:first-child {
+            border-top-left-radius: 15px;
+        }
+
+        th:last-child {
+            border-top-right-radius: 15px;
+        }
+
+        td {
+            padding: 18px 25px;
+            color: #4a5568;
+            font-weight: 500;
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 15px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 15px;
+        }
+
+        tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        tbody tr:hover td {
+            color: #2d3748;
+        }
+
+        /* 学号列特殊样式 */
+        td:first-child {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        /* 姓名列特殊样式 */
+        td:nth-child(2) {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        /* 专业列特殊样式 */
+        td:last-child {
+            font-style: italic;
+            color: #764ba2;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .title {
+                font-size: 2em;
+            }
+
+            th,
+            td {
+                padding: 12px 15px;
+                font-size: 0.9em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+        }
+
+        /* 添加微妙的动画效果 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">学生信息概览</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>年级</th>
+                    <th>专业</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023001</td>
+                    <td>张三</td>
+                    <td>18</td>
+                    <td>大一</td>
+                    <td>计算机科学与技术</td>
+                </tr>
+                <tr>
+                    <td>2023002</td>
+                    <td>李四</td>
+                    <td>19</td>
+                    <td>大二</td>
+                    <td>软件工程</td>
+                </tr>
+                <tr>
+                    <td>2023003</td>
+                    <td>王五</td>
+                    <td>18</td>
+                    <td>大一</td>
+                    <td>数据科学</td>
+                </tr>
+                <tr>
+                    <td>2023004</td>
+                    <td>赵六</td>
+                    <td>20</td>
+                    <td>大三</td>
+                    <td>人工智能</td>
+                </tr>
+                <tr>
+                    <td>2023005</td>
+                    <td>钱七</td>
+                    <td>19</td>
+                    <td>大二</td>
+                    <td>网络安全</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
